@@ -57,12 +57,29 @@ public class MainActivity extends AppCompatActivity {
             List<Mahasiswa> list = database.mahasiswaDao().getAllMahasiswa();
             StringBuilder output = new StringBuilder();
             for (Mahasiswa m : list) {
-                output.append(m.getNama()).append(" - ").append(m.getNim()).append(" - ").append(m.getAlamat()).append(" - ").append(m.getAsalSekolah()).append(" \n");
+                output.append(m.getNama()).append(" - ").append(m.getNim())
+                        .append(" - ").append(m.getAlamat()).append(" - ")
+                        .append(m.getAsalSekolah()).append(" \n");
             }
             // Update UI on the main thread
             runOnUiThread(() -> tvOutput.setText(output.toString()));
         }).start();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
